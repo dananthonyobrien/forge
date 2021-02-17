@@ -4,6 +4,14 @@ import random
 import nltk
 from nltk import sent_tokenize
 
+protagonist = input("Name of protagonist:")
+pronoun = input("Protagonist's pronouns:")
+country = input("Protagonist's country:")
+view = ["plains", "hills", "forests", "seas", "lakes"]
+randomView = random.choice(view)
+
+print (protagonist + " looked out on the " + randomView + " of " + country + " and reflected on " + pronoun + " life")
+
 
 # date class uses random to choose a day, month, and year. Year range will be inputted in app
 
@@ -56,17 +64,55 @@ class oConnellSpeeches:
 	oConnellSpeeches = open("oConnellSpeeches.txt").read()
 	sentences = nltk.sent_tokenize(oConnellSpeeches)
 	randomSentence = random.choice(sentences)
-	print (randomSentence)
+	print (randomSentence, randomSentence, randomSentence)
 
 
-class oConnellSpeechesGeneration:
+'''class oConnellSpeechesGeneration:
 	file = open("oConnellSpeeches.txt", "r")
 	text = file.read()
 	text1=text.split()
 	oConnellSpeeches=nltk.Text(text1)
-	oConnellSpeeches.generate()
+	oConnellSpeeches.generate() '''
 
 
+class geraldTopography:
+	geraldTopography = open("geraldTopography.txt").read()
+	sentences = nltk.sent_tokenize(geraldTopography)
+	randomSentence = random.choice(sentences)
+	print (randomSentence)
+
+
+class raleighGuiana:
+	raleighGuiana = open("raleighGuiana.txt").read()
+	sentences = nltk.sent_tokenize(raleighGuiana)
+	randomSentence = random.choice(sentences)
+	print (randomSentence)
+
+class spenserFQ1:
+	spenserFQ1 = open("spenserFQ1.txt").read()
+	sentences = nltk.sent_tokenize(spenserFQ1)
+	randomSentence = random.choice(sentences)
+	print (randomSentence)
+
+class spenserFQ2:
+	spenserFQ2 = open("spenserFQ2.txt").read()
+	sentences = nltk.sent_tokenize(spenserFQ2)
+	randomSentence = random.choice(sentences)
+	print (randomSentence, randomSentence, randomSentence)
+
+
+class vegaIncas:
+	vegaIncas = open("vegaIncas.txt").read()
+	sentences = nltk.sent_tokenize(vegaIncas)
+	randomSentence = random.choice(sentences)
+	print (randomSentence)
+
+
+class voltaireCandide:
+	voltaireCandide = open("voltaireCandide.txt").read()
+	sentences = nltk.sent_tokenize(voltaireCandide)
+	randomSentence = random.choice(sentences)
+	print (randomSentence)
 
 
 
