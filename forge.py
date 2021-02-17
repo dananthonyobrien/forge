@@ -4,23 +4,34 @@ import random
 import nltk
 from nltk import sent_tokenize
 
+#User input for protagonist name, pronoun, country, and characteristics
 protagonist = input("Name of protagonist:")
-pronoun = input("Protagonist's pronouns:")
+pronounInput = input("Protagonist's pronouns: he(h), she(s), they(t)")
+if pronounInput == "t":
+    pronounOutput = "they"
+elif pronounInput == "s":
+    pronounOutput = "she"
+else: pronounOutput = "he"
+characteristicsInput = str(input("Protagonist's characteristics seperated by space"))
+characteristicsOutput = characteristicsInput.split()
+randomCharacteristic1 = random.choice(characteristicsOutput)
+randomCharacteristic2 = random.choice(characteristicsOutput)
 country = input("Protagonist's country:")
 view = ["plains", "hills", "forests", "seas", "lakes"]
 randomView = random.choice(view)
 
-print (protagonist + " looked out on the " + randomView + " of " + country + " and reflected on " + pronoun + " life")
+
+print (protagonist + " looked out on the " + randomView + " of " + country + " and reflected on " + pronounOutput + " life. "  + pronounOutput + " was "  + randomCharacteristic1 + " and " + randomCharacteristic2 + " and at home in his surroundings.")
 
 
 # date class uses random to choose a day, month, and year. Year range will be inputted in app
 
 class date:
-		day = (random.randrange(1, 28))
-		month = ["January", "February", "March", "April", ]
-		randomMonth = random.choice(month)
-		year = (random.randrange(1805, 1830))
-		print(str(day) + " " + randomMonth + " " + str(year))
+	day = (random.randrange(1, 28))
+	month = ["January", "February", "March", "April", ]
+	randomMonth = random.choice(month)
+	year = (random.randrange(1805, 1830))
+	print(str(day) + " " + randomMonth + " " + str(year))
 
 #weather class uses random weather and time to set scene
 
